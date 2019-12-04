@@ -25,13 +25,12 @@ app.post('/post',function(req,res){
     var y = req.body.y.split(",");
     var z = req.body.z.split(",");
     var state = req.body.state;
-    var noOfInstances = req.body.noOfInstances;
 
     var logger = fs.createWriteStream('data.txt', {
         flags: 'a' // 'a' means appending (old data will be preserved)
       })
 
-    for (let i = 0; i < noOfInstances; i++){
+    for (let i = 0; i < x.length; i++){
         logger.write(state + " " + x[i] + " " + y[i] + " " + z[i] + os.EOL);
     }
 
