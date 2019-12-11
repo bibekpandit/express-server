@@ -36,7 +36,7 @@ app.post('/post',function(req,res){
 
     logger.end()
     console.log("Data Written!");
-    res.send('Post Request Received');
+    res.send('Post Received');
 });
 
 
