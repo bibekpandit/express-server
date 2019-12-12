@@ -33,7 +33,6 @@ app.post('/post',function(req,res){
     for (let i = 0; i < x.length; i++){
         logger.write(state + " " + x[i] + " " + y[i] + " " + z[i] + os.EOL);
     }
-
     logger.end()
     console.log("Data Written!");
     res.send('Post Received');
