@@ -25,7 +25,6 @@ app.post('/post',function(req,res){
     var y = req.body.y.split(",");
     var z = req.body.z.split(",");
     var state = req.body.state;
-
     var logger = fs.createWriteStream('data.txt', {
         flags: 'a' // 'a' means appending (old data will be preserved)
       })
